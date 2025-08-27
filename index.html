@@ -1,99 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MD Assadulla Al Galib | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Theme Toggle -->
+  <button class="toggle-btn" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
 
-  <button class="toggle-btn" onclick="toggleTheme()">🌙</button>
+  <!-- Header / Hero -->
+  <header class="hero" id="home">
+    <div class="hero-inner">
+      <img class="profile-pic" src="images/profile.jpg" alt="Profile picture of MD Assadulla Al Galib" />
+      <h1>MD Assadulla Al Galib</h1>
+      <p class="sub">Full Stack Developer • CSE Engineer</p>
 
-  <header>
-    <h1>MD Assadulla Al Galib</h1>
-    <p class="typing">Full Stack Developer | ASP.NET | PHP | JavaScript</p>
-    <br>
-    <a href="resume.pdf" download class="cv-btn">📄 Download CV</a>
+      <!-- Typing effect -->
+      <p class="typing">
+        <span id="typingText" aria-live="polite"></span>
+        <span class="caret" aria-hidden="true"></span>
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="resume.pdf" download>📄 Download CV</a>
+        <a class="btn outline" href="#projects">View Projects</a>
+      </div>
+    </div>
   </header>
 
-  <nav>
+  <!-- Sticky Nav -->
+  <nav class="nav">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a Computer Science Engineer and passionate Full Stack Developer with expertise in ASP.NET MVC, 
-      PHP, JavaScript, and modern web technologies. I enjoy solving problems and building efficient web applications.
-    </p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>ASP.NET MVC</li>
-      <li>Entity Framework</li>
-      <li>PHP & MySQL</li>
-      <li>JavaScript</li>
-      <li>HTML & CSS</li>
-      <li>C++ / Java</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="filter-buttons">
-      <button onclick="filterProjects('all')">All</button>
-      <button onclick="filterProjects('web')">Web</button>
-      <button onclick="filterProjects('game')">Game</button>
-    </div>
-
-    <div class="card" data-type="web" onclick="openModal('TeamSync','A cloud-based project management tool','images/teamsync.png')">
-      <img src="images/teamsync.png" alt="TeamSync">
-      <h3>TeamSync</h3>
-      <p>Cloud-based collaboration & project management tool.</p>
-    </div>
-
-    <div class="card" data-type="web" onclick="openModal('E-Commerce Website','PHP & MySQL based online store','images/ecommerce.png')">
-      <img src="images/ecommerce.png" alt="E-commerce">
-      <h3>E-Commerce Website</h3>
-      <p>PHP & MySQL based shop with cart and checkout.</p>
-    </div>
-
-    <div class="card" data-type="game" onclick="openModal('Super Mario Clone','Fun C++ graphics-based Mario replica','images/mario.png')">
-      <img src="images/mario.png" alt="Mario">
-      <h3>Super Mario Clone</h3>
-      <p>Fun C++ graphics-based Mario replica.</p>
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I’m a Computer Science Engineer and passionate Full Stack Developer with experience in
+        ASP.NET MVC, Entity Framework, PHP, JavaScript, and MySQL. I love building fast, usable,
+        and scalable web applications—and I’m growing deep skills in Software Quality Assurance.
+      </p>
     </div>
   </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="chips">
+        <li>ASP.NET MVC</li>
+        <li>Entity Framework</li>
+        <li>PHP & MySQL</li>
+        <li>JavaScript</li>
+        <li>HTML & CSS</li>
+        <li>C++ / Java</li>
+        <li>Software Testing (SQA)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <!-- Filters -->
+      <div class="filters" role="tablist" aria-label="Project filters">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web</button>
+        <button class="filter-btn" data-filter="game" role="tab" aria-selected="false">Game</button>
+        <button class="filter-btn" data-filter="other" role="tab" aria-selected="false">Other</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid">
+        <article class="card" data-type="web" tabindex="0"
+          data-title="TeamSync"
+          data-desc="A cloud-based collaboration & project management tool."
+          data-img="images/teamsync.jpg">
+          <img src="images/teamsync.jpg" alt="TeamSync project screenshot" />
+          <h3>TeamSync</h3>
+          <p>Cloud-based collaboration & project management tool.</p>
+        </article>
+
+        <article class="card" data-type="web" tabindex="0"
+          data-title="E-Commerce Website"
+          data-desc="A PHP & MySQL shop with product listing, cart, and checkout."
+          data-img="images/ecommerce.jpg">
+          <img src="images/ecommerce.jpg" alt="E-commerce website screenshot" />
+          <h3>E-Commerce Website</h3>
+          <p>PHP & MySQL shop with cart and checkout.</p>
+        </article>
+
+        <article class="card" data-type="game" tabindex="0"
+          data-title="Super Mario Clone"
+          data-desc="A fun C++ graphics-based Mario replica."
+          data-img="images/mario.jpg">
+          <img src="images/mario.jpg" alt="Super Mario clone screenshot" />
+          <h3>Super Mario Clone</h3>
+          <p>C++ game project replicating Mario gameplay.</p>
+        </article>
+
+        <article class="card" data-type="other" tabindex="0"
+          data-title="Test Automation Demo"
+          data-desc="Lightweight JS + Playwright sample for UI smoke tests."
+          data-img="images/teamsync.jpg">
+          <img src="images/teamsync.jpg" alt="Automation demo screenshot" />
+          <h3>Automation Demo</h3>
+          <p>JS + Playwright smoke tests.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contactForm" novalidate>
+        <label>
+          <span>Name</span>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input type="email" id="email" name="email" placeholder="you@email.com" required />
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+        </label>
+
+        <button type="submit" class="btn primary">Send Message</button>
+        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 MD Assadulla Al Galib • All Rights Reserved</p>
+  </footer>
 
   <!-- Modal -->
-  <div id="projectModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-      <h2 id="modalTitle"></h2>
-      <img id="modalImg" src="" alt="">
+  <div id="projectModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <h3 id="modalTitle"></h3>
+      <img id="modalImg" src="" alt="" />
       <p id="modalDesc"></p>
     </div>
+    <div class="modal-backdrop"></div>
   </div>
-
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <form onsubmit="return validateForm()">
-      <input type="text" id="name" placeholder="Your Name">
-      <input type="email" id="email" placeholder="Your Email">
-      <textarea id="message" rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 MD Assadulla Al Galib | All Rights Reserved</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
