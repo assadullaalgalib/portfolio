@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MD Assadulla Al Galib | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleTheme()">🌙</button>
+
+  <header>
+    <h1>MD Assadulla Al Galib</h1>
+    <p class="typing">Full Stack Developer | ASP.NET | PHP | JavaScript</p>
+    <br>
+    <a href="resume.pdf" download class="cv-btn">📄 Download CV</a>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Computer Science Engineer and passionate Full Stack Developer with expertise in ASP.NET MVC, 
+      PHP, JavaScript, and modern web technologies. I enjoy solving problems and building efficient web applications.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>ASP.NET MVC</li>
+      <li>Entity Framework</li>
+      <li>PHP & MySQL</li>
+      <li>JavaScript</li>
+      <li>HTML & CSS</li>
+      <li>C++ / Java</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="filter-buttons">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('web')">Web</button>
+      <button onclick="filterProjects('game')">Game</button>
+    </div>
+
+    <div class="card" data-type="web" onclick="openModal('TeamSync','A cloud-based project management tool','images/teamsync.png')">
+      <img src="images/teamsync.png" alt="TeamSync">
+      <h3>TeamSync</h3>
+      <p>Cloud-based collaboration & project management tool.</p>
+    </div>
+
+    <div class="card" data-type="web" onclick="openModal('E-Commerce Website','PHP & MySQL based online store','images/ecommerce.png')">
+      <img src="images/ecommerce.png" alt="E-commerce">
+      <h3>E-Commerce Website</h3>
+      <p>PHP & MySQL based shop with cart and checkout.</p>
+    </div>
+
+    <div class="card" data-type="game" onclick="openModal('Super Mario Clone','Fun C++ graphics-based Mario replica','images/mario.png')">
+      <img src="images/mario.png" alt="Mario">
+      <h3>Super Mario Clone</h3>
+      <p>Fun C++ graphics-based Mario replica.</p>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="projectModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <h2 id="modalTitle"></h2>
+      <img id="modalImg" src="" alt="">
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name">
+      <input type="email" id="email" placeholder="Your Email">
+      <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 MD Assadulla Al Galib | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
