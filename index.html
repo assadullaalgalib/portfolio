@@ -83,8 +83,8 @@
         <article class="card" data-type="web" tabindex="0"
           data-title="TeamSync"
           data-desc="Multi-user project management platform with role-based dashboards for Admin, Project Manager, Developer, and Client. Features task management, project dashboards, file sharing, and notifications."
-          data-imgs='["images/teamsync 1.png","images/teamsync 2.png","images/teamsync3.png","images/teamsync4.png"]'
-          data-links='["https://github.com/nocillax/TeamSync"]'>
+          data-imgs='["images/teamsync 1.png","images/teamsync 2.png","images/teamsync 3.png","images/teamsync 4.png"]'
+          data-link="https://github.com/nocillax/TeamSync">
           <img src="images/teamsync 1.png" alt="TeamSync screenshot">
           <h3>TeamSync</h3>
           <p>Project management platform with dashboards & collaboration. </p>
@@ -139,39 +139,26 @@
           <p>Manual QA test cases for Amazon pages. <strong>Tech:</strong> Manual Testing, Test Cases Documentation</p>
           <p><strong>Link:</strong> <a href="https://github.com/assadullaalgalib/Amazon-Ecommerce-Testing-" target="_blank">View on GitHub</a></p>
         </article>
-
-        <!-- New Project Example -->
-        <article class="card"
-          data-title="Project"
-          data-desc="Description"
-          data-imgs='["images/1.png","images/2.png","images/3.png"]'
-          data-link="#">
-          <img src="images/1.png" alt="Project screenshot">
-          <h3>Project Title</h3>
-          <p>Short project description.</p>
-          <p><strong>Tech:</strong> Tech stack used</p>
-          <p><strong>Link:</strong> <a href="#" target="_blank">View details</a></p>
-        </article>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+ <!-- Contact -->
   <section id="contact" class="section alt">
     <div class="container">
       <h2>Contact Me</h2>
-      <form id="contactForm" novalidate>
+      <form id="contactForm" action="https://formspree.io/f/xovnvbdz" method="POST">
         <label>
           <span>Name</span>
-          <input type="text" id="name" name="name" placeholder="Your name" required>
+          <input type="text" name="name" required>
         </label>
         <label>
           <span>Email</span>
-          <input type="email" id="email" name="email" placeholder="you@email.com" required>
+          <input type="email" name="email" required>
         </label>
         <label>
           <span>Message</span>
-          <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+          <textarea name="message" rows="5" required></textarea>
         </label>
         <button type="submit" class="btn primary">Send Message</button>
         <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
@@ -189,17 +176,13 @@
     <div class="modal-dialog">
       <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
       <h3 id="modalTitle"></h3>
-      <div style="position:relative;">
-        <button id="modalPrev" class="modal-img-nav" aria-label="Previous image" style="position:absolute;left:0;top:50%;transform:translateY(-50%);">⟨</button>
-        <img id="modalImg" src="" alt="">
-        <button id="modalNext" class="modal-img-nav" aria-label="Next image" style="position:absolute;right:0;top:50%;transform:translateY(-50%);">⟩</button>
-      </div>
+      <img id="modalImg" src="" alt="">
       <p id="modalDesc"></p>
-      <div id="modalLinks"></div>
     </div>
     <div class="modal-backdrop"></div>
   </div>
 
   <script src="script.js"></script>
+
 </body>
 </html>

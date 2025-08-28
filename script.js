@@ -28,7 +28,6 @@ function type() {
 type();
 
 // Project Filter
-// Project Filter
 const filterBtns = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll(".card");
 
@@ -58,11 +57,7 @@ const modal = document.getElementById("projectModal");
 const modalTitle = document.getElementById("modalTitle");
 const modalImg = document.getElementById("modalImg");
 const modalDesc = document.getElementById("modalDesc");
-const modalLink = document.getElementById("modalLink");
 const modalClose = document.getElementById("modalClose");
-const modalLinks = document.getElementById("modalLinks");
-const modalPrev = document.getElementById("modalPrev");
-const modalNext = document.getElementById("modalNext");
 
 let modalImgs = [];
 let modalImgIndex = 0;
@@ -83,6 +78,11 @@ function startModalImgTimer() {
 
 cards.forEach(card => {
   card.addEventListener("click", () => {
+    // remove active from all
+    cards.forEach(c => c.classList.remove("active"));
+    // add active to clicked one
+    card.classList.add("active");
+
     modal.style.display = "block";
     modalTitle.textContent = card.dataset.title;
     modalDesc.textContent = card.dataset.desc;
@@ -90,37 +90,7 @@ cards.forEach(card => {
     modalImgIndex = 0;
     showModalImg(modalImgIndex);
     startModalImgTimer();
-
-    // Multiple or single link support
-    modalLinks.innerHTML = "";
-    let links = [];
-    if (card.dataset.links) {
-      links = JSON.parse(card.dataset.links);
-    } else if (card.dataset.link) {
-      links = [card.dataset.link];
-    }
-    links.forEach((url, idx) => {
-      const a = document.createElement("a");
-      a.href = url;
-      a.target = "_blank";
-      a.rel = "noopener";
-      a.className = "btn";
-      a.textContent = links.length > 1 ? `View on GitHub #${idx + 1}` : "View on GitHub";
-      modalLinks.appendChild(a);
-      if (idx < links.length - 1) modalLinks.appendChild(document.createTextNode(" "));
-    });
   });
-});
-
-modalPrev.addEventListener("click", e => {
-  e.stopPropagation();
-  showModalImg(modalImgIndex - 1);
-  startModalImgTimer();
-});
-modalNext.addEventListener("click", e => {
-  e.stopPropagation();
-  showModalImg(modalImgIndex + 1);
-  startModalImgTimer();
 });
 
 modalClose.addEventListener("click", () => {
@@ -132,9 +102,31 @@ modal.querySelector(".modal-backdrop").addEventListener("click", () => {
   clearInterval(modalImgTimer);
 });
 
-// Contact Form (dummy)
-document.getElementById("contactForm").addEventListener("submit", e => {
+// Contact Form (Formspree AJAX)
+const form = document.getElementById('contactForm');
+const status = document.getElementById('formStatus');
+
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  document.getElementById("formStatus").textContent = "✅ Message sent successfully!";
-  e.target.reset();
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      status.textContent = "✅ Message sent successfully!";
+      status.style.color = "green";
+      form.reset();
+    } else {
+      status.textContent = "❌ Failed to send message. Try again.";
+      status.style.color = "red";
+    }
+  } catch (error) {
+    status.textContent = "❌ Failed to send message. Try again.";
+    status.style.color = "red";
+  }
 });
