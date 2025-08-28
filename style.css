@@ -60,10 +60,10 @@ body {
   color: #fff;
 }
 .hero .profile-pic {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 5px solid #fff;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  border: 5px solid #fcfcfc;
   object-fit: cover;
   margin-bottom: 1.2rem;
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
@@ -398,4 +398,40 @@ form button {
 body.dark .modal-dialog {
   box-shadow: 0 8px 24px rgba(255,255,255,0.1);
   border: 1px solid #444; /* optional */
+}
+
+/* ===================== Mobile Responsive ===================== */
+@media (max-width: 600px) {
+  .hero .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+  .hero {
+    padding: 2.5rem 0.5rem 2rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .section {
+    padding: 2.5rem 0.5rem;
+  }
+  .modal-dialog {
+    padding: 1rem;
+    max-width: 98vw;
+  }
+  .modal-dialog img {
+    max-height: 220px;
+  }
+  form {
+    padding: 0 0.5rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
 }
