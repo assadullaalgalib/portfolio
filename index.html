@@ -1,188 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MD Assadulla Al Galib | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Theme Toggle -->
-  <button class="toggle-btn" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MD Assadulla Al Galib | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Theme Toggle -->
+    <button class="toggle-btn" id="themeToggle" aria-label="Toggle dark mode">
+      🌙
+    </button>
 
-  <!-- Header -->
-  <header class="hero" id="home">
-    <div class="hero-inner">
-      <img class="profile-pic" src="images/Profile.jpg" alt="Profile picture of MD Assadulla Al Galib">
-      <h1>MD Assadulla Al Galib</h1>
-      <p class="sub">Full Stack Developer • CSE Engineer</p>
+    <!-- Header -->
+    <header class="hero" id="home">
+      <div class="hero-inner">
+        <img
+          class="profile-pic"
+          src="images/Profile.jpg"
+          alt="Profile picture of MD Assadulla Al Galib"
+        />
+        <h1>MD Assadulla Al Galib</h1>
+        <p class="sub">Full Stack Developer • CSE Engineer</p>
 
-      <p class="typing">
-        <span id="typingText" aria-live="polite"></span>
-        <span class="caret" aria-hidden="true"></span>
-      </p>
+        <p class="typing">
+          <span id="typingText" aria-live="polite"></span>
+          <span class="caret" aria-hidden="true"></span>
+        </p>
 
-      <div class="hero-actions">
-        <a class="btn primary" href="resume.pdf" download>📄 Download CV</a>
-        <a class="btn outline" href="#projects">View Projects</a>
+        <div class="hero-actions">
+          <a class="btn primary" href="resume.pdf" download>📄 Download CV</a>
+          <a class="btn outline" href="#projects">View Projects</a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <!-- Navigation -->
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I’m a Computer Science Engineer and passionate Full Stack Developer with experience in
-        ASP.NET MVC, Entity Framework, PHP, JavaScript, and MySQL. I love building fast, usable,
-        and scalable web applications—and I’m growing deep skills in Software Quality Assurance.
-      </p>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section alt">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul class="chips">
-        <li>ASP.NET MVC</li>
-        <li>Entity Framework</li>
-        <li>PHP & MySQL</li>
-        <li>JavaScript</li>
-        <li>HTML & CSS</li>
-        <li>C++ / Java</li>
-        <li>Software Testing (SQA)</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
-
-      <!-- Filters -->
-      <div class="filters" role="tablist" aria-label="Project filters">
-        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
-        <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web</button>
-        <button class="filter-btn" data-filter="other" role="tab" aria-selected="false">Other</button>
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I’m a Computer Science Engineer and passionate Full Stack Developer
+          with experience in ASP.NET MVC, Entity Framework, PHP, JavaScript, and
+          MySQL. I love building fast, usable, and scalable web applications—and
+          I’m growing deep skills in Software Quality Assurance.
+        </p>
       </div>
+    </section>
 
-      <!-- Project Grid -->
-      <div class="grid">
-        <!-- TeamSync -->
-        <article class="card" data-type="web" tabindex="0"
-          data-title="TeamSync"
-          data-desc="Multi-user project management platform with role-based dashboards for Admin, Project Manager, Developer, and Client. Features task management, project dashboards, file sharing, and notifications."
-          data-imgs='["images/teamsync 1.png","images/teamsync 2.png","images/teamsync 3.png","images/teamsync 4.png"]'
-          data-link="https://github.com/nocillax/TeamSync">
-          <img src="images/teamsync 1.png" alt="TeamSync screenshot">
-          <h3>TeamSync</h3>
-          <p>Project management platform with dashboards & collaboration. </p>
-          <p><strong>Tech:</strong> ASP.NET MVC, EF, JS, Bootstrap</p>
-          <p><strong>Link:</strong> <a href="https://github.com/nocillax/TeamSync" target="_blank">View on GitHub</a></p>
-        </article>
-
-        <!-- E-Commerce -->
-        <article class="card" data-type="web" tabindex="0"
-          data-title="E-Commerce Website"
-          data-desc="PHP & MySQL online store with user login, dynamic product display, shopping cart, checkout, and order tracking."
-          data-imgs='["images/ecommerce 1.png","images/ecommerce 2.png","images/ecommerce 3.png","images/ecommerce 4.png"]'
-          data-link="https://github.com/assadullaalgalib/E-Commerce-PHP">
-          <img src="images/ecommerce 1.png" alt="E-Commerce screenshot">
-          <h3>E-Commerce Website</h3>
-          <p>PHP & MySQL store with cart & checkout. </p>
-          <p><strong>Tech:</strong> PHP, MySQL, JS, HTML/CSS</p>
-          <p><strong>Link:</strong> <a href="https://github.com/assadullaalgalib/E-Commerce-PHP" target="_blank">View on GitHub</a></p>
-        </article>
-
-        <!-- Inventory & Sales -->
-        <article class="card" data-type="web" tabindex="0"
-          data-title="Inventory & Sales Management System"
-          data-desc="Dashboard-based system for managing inventory, sales, and stock levels. Includes real-time product search, JWT authentication, PDF invoice generation, KPI tracking, and analytics."
-          data-imgs='["images/inventory 1.jpg","images/inventory 2.jpg","images/inventory 3.jpg","images/inventory 4.jpg"]'
-          data-link="https://github.com/nocillax/Inventory---Sales-Management-System">
-          <img src="images/inventory 1.jpg" alt="Inventory screenshot">
-          <h3>Inventory & Sales System</h3>
-          <p>Dashboard system for inventory, sales & analytics.</p>
-          <p><strong>Tech:</strong> ASP.NET MVC, JS, Bootstrap, MySQL</p>
-          <p><strong>Link:</strong> <a href="https://github.com/nocillax/Inventory---Sales-Management-System" target="_blank">View on GitHub</a></p>
-        </article>
-
-        <!-- QA Projects -->
-        <article class="card" data-type="other" tabindex="0"
-          data-title="Automation Testing – TeamSync"
-          data-desc="Automated test scripts using Selenium IDE for TeamSync project. Includes test cases for login, project creation, task assignment, and notifications."
-          data-imgs='["images/automation.jpg"]'
-          data-link="https://github.com/assadullaalgalib/Automation-Testing-of-the-TeamSync-Web-Application-Test-Case-Execution-using-Selenium-IDE">
-          <h3>Automation Testing</h3>
-          <p>Selenium IDE automation for TeamSync. </p>
-          <p><strong>Tech:</strong> Selenium IDE, JavaScript</p>
-          <p><strong>Link:</strong> <a href="https://github.com/assadullaalgalib/Automation-Testing-of-the-TeamSync-Web-Application-Test-Case-Execution-using-Selenium-IDE" target="_blank">View on GitHub</a></p>
-        </article>
-
-        <article class="card" data-type="other" tabindex="0"
-          data-title="Amazon E-Commerce Testing"
-          data-desc="Manual test cases for Amazon: Home, Search, Cart, Checkout pages. Test coverage includes UI, functionality, and workflow validation."
-          data-imgs='["images/amazon.jpg"]'
-          data-link="https://github.com/assadullaalgalib/Amazon-Ecommerce-Testing-">
-          <h3>Amazon Testing</h3>
-          <p>Manual QA test cases for Amazon pages. <strong>Tech:</strong> Manual Testing, Test Cases Documentation</p>
-          <p><strong>Link:</strong> <a href="https://github.com/assadullaalgalib/Amazon-Ecommerce-Testing-" target="_blank">View on GitHub</a></p>
-        </article>
+    <!-- Skills -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="chips">
+          <li>ASP.NET MVC</li>
+          <li>Entity Framework</li>
+          <li>PHP & MySQL</li>
+          <li>JavaScript</li>
+          <li>HTML & CSS</li>
+          <li>C++ / Java</li>
+          <li>Software Testing (SQA)</li>
+        </ul>
       </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <!-- Filters -->
+        <div class="filters" role="tablist" aria-label="Project filters">
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            role="tab"
+            aria-selected="true"
+          >
+            All
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="web"
+            role="tab"
+            aria-selected="false"
+          >
+            Web
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="other"
+            role="tab"
+            aria-selected="false"
+          >
+            Other
+          </button>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="grid">
+          <!-- TeamSync -->
+          <article
+            class="card"
+            data-type="web"
+            tabindex="0"
+            data-title="TeamSync"
+            data-desc="Multi-user project management platform with role-based dashboards for Admin, Project Manager, Developer, and Client. Features task management, project dashboards, file sharing, and notifications."
+            data-imgs='["images/teamsync 1.png","images/teamsync 2.png","images/teamsync 3.png","images/teamsync 4.png"]'
+            data-link="https://github.com/assadullaalgalib/TeamSync"
+          >
+            <img src="images/teamsync 1.png" alt="TeamSync screenshot" />
+            <h3>TeamSync</h3>
+            <p>Project management platform with dashboards & collaboration.</p>
+            <p><strong>Tech:</strong> ASP.NET MVC, EF, JS, Bootstrap</p>
+            <p>
+              <strong>Link:</strong>
+              <a
+                href="https://github.com/assadullaalgalib/TeamSync"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </p>
+          </article>
+
+          <!-- E-Commerce -->
+          <article
+            class="card"
+            data-type="web"
+            tabindex="0"
+            data-title="E-Commerce Website"
+            data-desc="PHP & MySQL online store with user login, dynamic product display, shopping cart, checkout, and order tracking."
+            data-imgs='["images/ecommerce 1.png","images/ecommerce 2.png","images/ecommerce 3.png","images/ecommerce 4.png"]'
+            data-link="https://github.com/assadullaalgalib/E-Commerce-PHP"
+          >
+            <img src="images/ecommerce 1.png" alt="E-Commerce screenshot" />
+            <h3>E-Commerce Website</h3>
+            <p>PHP & MySQL store with cart & checkout.</p>
+            <p><strong>Tech:</strong> PHP, MySQL, JS, HTML/CSS</p>
+            <p>
+              <strong>Link:</strong>
+              <a
+                href="https://github.com/assadullaalgalib/E-Commerce-PHP"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </p>
+          </article>
+
+          <!-- Inventory & Sales -->
+          <article
+            class="card"
+            data-type="web"
+            tabindex="0"
+            data-title="Inventory & Sales Management System"
+            data-desc="Dashboard-based system for managing inventory, sales, and stock levels. Includes real-time product search, JWT authentication, PDF invoice generation, KPI tracking, and analytics."
+            data-imgs='["images/inventory 1.jpg","images/inventory 2.jpg","images/inventory 3.jpg","images/inventory 4.jpg"]'
+            data-link="https://github.com/assadullaalgalib/Inventory---Sales-Management-System"
+          >
+            <img src="images/inventory 1.jpg" alt="Inventory screenshot" />
+            <h3>Inventory & Sales System</h3>
+            <p>Dashboard system for inventory, sales & analytics.</p>
+            <p><strong>Tech:</strong> ASP.NET MVC, JS, Bootstrap, MySQL</p>
+            <p>
+              <strong>Link:</strong>
+              <a
+                href="https://github.com/assadullaalgalib/Inventory---Sales-Management-System"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </p>
+          </article>
+
+          <!-- QA Projects -->
+          <article
+            class="card"
+            data-type="other"
+            tabindex="0"
+            data-title="Automation Testing – TeamSync"
+            data-desc="Automated test scripts using Selenium IDE for TeamSync project. Includes test cases for login, project creation, task assignment, and notifications."
+            data-imgs='["images/automation.jpg"]'
+            data-link="https://github.com/assadullaalgalib/Automation-Testing-of-the-TeamSync-Web-Application-Test-Case-Execution-using-Selenium-IDE"
+          >
+            <h3>Automation Testing</h3>
+            <p>Selenium IDE automation for TeamSync.</p>
+            <p><strong>Tech:</strong> Selenium IDE, JavaScript</p>
+            <p>
+              <strong>Link:</strong>
+              <a
+                href="https://github.com/assadullaalgalib/Automation-Testing-of-the-TeamSync-Web-Application-Test-Case-Execution-using-Selenium-IDE"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </p>
+          </article>
+
+          <article
+            class="card"
+            data-type="other"
+            tabindex="0"
+            data-title="Amazon E-Commerce Testing"
+            data-desc="Manual test cases for Amazon: Home, Search, Cart, Checkout pages. Test coverage includes UI, functionality, and workflow validation."
+            data-imgs='["images/amazon.jpg"]'
+            data-link="https://github.com/assadullaalgalib/Amazon-Ecommerce-Testing-"
+          >
+            <h3>Amazon Testing</h3>
+            <p>
+              Manual QA test cases for Amazon pages.
+              <strong>Tech:</strong> Manual Testing, Test Cases Documentation
+            </p>
+            <p>
+              <strong>Link:</strong>
+              <a
+                href="https://github.com/assadullaalgalib/Amazon-Ecommerce-Testing-"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/xovnvbdz"
+          method="POST"
+        >
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn primary">Send Message</button>
+          <p
+            id="formStatus"
+            class="form-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 MD Assadulla Al Galib • All Rights Reserved</p>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      id="projectModal"
+      class="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-dialog">
+        <button class="modal-close" id="modalClose" aria-label="Close">
+          &times;
+        </button>
+        <h3 id="modalTitle"></h3>
+        <img id="modalImg" src="" alt="" />
+        <p id="modalDesc"></p>
+      </div>
+      <div class="modal-backdrop"></div>
     </div>
-  </section>
 
- <!-- Contact -->
-  <section id="contact" class="section alt">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form id="contactForm" action="https://formspree.io/f/xovnvbdz" method="POST">
-        <label>
-          <span>Name</span>
-          <input type="text" name="name" required>
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" required>
-        </label>
-        <label>
-          <span>Message</span>
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-        <button type="submit" class="btn primary">Send Message</button>
-        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 MD Assadulla Al Galib • All Rights Reserved</p>
-  </footer>
-
-  <!-- Modal -->
-  <div id="projectModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-dialog">
-      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
-      <h3 id="modalTitle"></h3>
-      <img id="modalImg" src="" alt="">
-      <p id="modalDesc"></p>
-    </div>
-    <div class="modal-backdrop"></div>
-  </div>
-
-  <script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
